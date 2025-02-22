@@ -86,7 +86,6 @@ async def shutdown_check(bot: Bot):
             exit(0)  # Завершаем процесс (Railway его выключит)
 
 async def main():
-    logging.info("🚀 Бот проснулся и работает!")
     connector = aiohttp.TCPConnector()
     bot = Bot(token=TOKEN, connector=connector)
     dp = Dispatcher(storage=MemoryStorage())
